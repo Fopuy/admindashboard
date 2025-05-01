@@ -13,6 +13,14 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+
 :root {
     --white-filter: invert(99%) sepia(15%) saturate(272%) hue-rotate(38deg) brightness(102%) contrast(92%);
 }
@@ -21,14 +29,11 @@ li img, p img{
     filter: var(--white-filter);
 }
 
-html{
-    height: 100%;
-}
-
 .container{
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 4fr;
+    min-height: 100%;
 }
 
 ul, li{
@@ -132,7 +137,6 @@ button{
     font-weight: bold;
     font-size: 1.3rem;
     padding: 20px;
-    height: 100vh;
 }
 
 .sidebar .dashboard{
@@ -169,7 +173,7 @@ img{
     grid-row: 2 / -1;
     background-color: rgba(202, 205, 231, 0.301);
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;;
+    grid-template-rows: auto auto;
     gap: 30px;
 }
 
@@ -237,6 +241,7 @@ img{
     padding: 20px;
     gap: 20px;
     margin: 0 20px 20px 0;
+    align-self: start;
   }
   
   .trending h2 {
